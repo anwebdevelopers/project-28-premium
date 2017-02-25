@@ -1,0 +1,183 @@
+.nominations {
+	@extend .section;
+	background-image: url(../img/bg-about.jpg);
+	background-size: cover;
+	background-position: right 0;
+}
+.nominations__wrapper {
+	@extend .container;
+}
+.nominations__title {
+	margin: 0 0 0 16%;
+}
+.nominations__box {
+	margin: 60px 0 0 16%;
+}
+.nominations__list {
+	ul {
+		margin: 0;
+		padding: 0 0 0 30px;
+		list-style: none;
+		font-size: 18px;
+		font-family: Verdana;
+		line-height: 1.8;
+		li {
+			position: relative;
+			margin: 0 0 30px 0;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 14px;
+				left: -30px;
+				height: 4px;
+				width: 15px;
+				border-radius: 4px;
+				background-color: $main-color;
+			}
+		}
+	}
+}
+.nominations__special {
+	position: relative;
+	margin: 70px 0 0 0;
+	padding: 0 0 0 120px;
+	
+}
+.nominations__special-title {
+	position: absolute;
+	left: -10px;
+	top: 40px;
+	text-transform: uppercase;
+	color: #fff;
+	h3 {
+		margin: 0;
+		font-size: 24px;
+		line-height: 1.8;
+		font-weight: 600;
+		
+		span {
+			background-color: darken($main-color, 6%);
+			padding: 10px 20px 10px 15px;
+		}
+	}
+}
+.nominations__special-list {
+	display: inline-block;
+	vertical-align: top;
+	padding: 40px 140px;
+	border: 5px solid $main-color;
+	border-image: linear-gradient(to bottom left, #00ba7f 0%, #00bab7 33.3%, #2d71c2 66.6%, #6519c2 100%);
+	border-image-slice: 1;
+	ul {
+		margin: 0;
+		padding: 0 0 0 30px;
+		list-style: none;
+		font-size: 18px;
+		font-family: Verdana;
+		line-height: 2;
+		li {
+			position: relative;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				top: 16px;
+				left: -30px;
+				height: 4px;
+				width: 15px;
+				border-radius: 4px;
+				background-color: $main-color;
+			}
+		}
+	}
+}
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.nominations__title {
+		margin: 0 0 0 0;
+	}
+	.nominations__box {
+		margin: 60px 0 0 0;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.nominations__special {
+	    padding: 0;
+	}
+	.nominations__special-title {
+	    position: static;
+	    left: auto;
+	    top: auto;
+	}
+	.nominations__special-list {
+	    display: block;
+	    margin: 40px 0 0 0;
+	    padding: 40px 10%;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 640px) {
+	.nominations__box {
+	    margin: 40px 0 0;
+	}
+	.nominations__list {
+		ul {
+			font-size: 16px;
+			line-height: 1.6;
+			li {
+				margin: 0 0 20px 0;
+				&:before {
+					top: 11px;
+				}
+			}
+		}
+	}
+	.nominations__special-list {
+		ul {
+			font-size: 16px;
+			li {
+				&:before {
+					top: 14px;
+				}
+			}
+		}
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.nominations__list {
+		ul {
+			font-size: 14px;
+			line-height: 1.5;
+			li {
+				margin: 0 0 15px 0;
+				&:before {
+					top: 9px;
+				}
+			}
+		}
+	}
+	.nominations__special-list {
+		ul {
+			font-size: 14px;
+			li {
+				&:before {
+					top: 12px;
+				}
+			}
+		}
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}

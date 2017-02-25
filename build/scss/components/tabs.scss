@@ -1,0 +1,233 @@
+.tabs {
+	//@extend .section;
+	position: relative;
+	background: #00263d url(../img/bg-mask.png) / repeat, 
+				url(../img/bg-tabs.jpg) right 0 / cover no-repeat;
+}
+.tabs__wrapper {
+	@extend .container;
+	position: static;
+}
+.tabs__buttons {
+	position: absolute;
+	z-index: 1;
+	top: -40px;
+	margin: 0 0 0 6%;
+	font-size: 0;
+}
+.tabs__button-item {
+	display: inline-block;
+	vertical-align: top;
+	padding: 30px;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 600;
+	transition: all .5s ease;
+}
+.tabs__button-item.active {
+	padding-bottom: 50px;
+}
+.tabs__button-item:nth-child(3n+1) {
+	background-color: #00be83;
+	&:hover, &:active, &:focus {
+		background-color: lighten(#00be83, 10%);
+		box-shadow: inset 0 0 50px 20px darken(#00be83, 10%);
+	}
+}
+.tabs__button-item:nth-child(3n+2) {
+	background-color: #0076c1;
+	&:hover, &:active, &:focus {
+		background-color: lighten(#0076c1, 10%);
+		box-shadow: inset 0 0 50px 20px darken(#0076c1, 10%);
+	}
+}
+.tabs__button-item:nth-child(3n+3){
+	background-color: #77348d;
+	&:hover, &:active, &:focus {
+		background-color: lighten(#77348d, 10%);
+		box-shadow: inset 0 0 50px 20px darken(#77348d, 10%);
+	}
+}
+
+.tabs__box {
+	margin: 0 0 0 8%;
+	padding: 160px 0 60px 70px;
+}
+.tabs__section {
+	display: none;
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	ul {
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		padding: 0 0 0 30px;
+		list-style: none;
+		font-size: 18px;
+		font-family: Verdana;
+		color: #fff;
+		line-height: 1.8;
+		li {
+			position: relative;
+			margin: 0 0 30px 0;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 14px;
+				left: -30px;
+				height: 4px;
+				width: 15px;
+				border-radius: 4px;
+				
+			}
+		}
+	}
+}
+.tabs__section.active {
+	display: block;
+}
+.tabs__section:nth-child(3n+1) {
+	&:before {
+		background: radial-gradient(circle closest-corner at 20% 30%, transparentize(#00be83, .6), transparent),
+					radial-gradient(circle closest-corner at 80% 70%, transparentize(#00be83, .6), transparent);
+	}
+	ul {
+		li{
+			&:before {
+				background-color: #00be83;
+			}
+		}
+	}
+}
+.tabs__section:nth-child(3n+2) {
+	&:before {
+		background: radial-gradient(circle closest-corner at 20% 20%, transparentize(#0076c1, .4), transparent),
+					radial-gradient(circle closest-corner at 80% 80%, transparentize(#0076c1, .4), transparent);
+	}
+	ul {
+		li{
+			&:before {
+				background-color: #0076c1;
+			}
+		}
+	}
+}
+.tabs__section:nth-child(3n+3) {
+	&:before {
+		background: radial-gradient(circle closest-corner at 20% 20%, transparentize(#77348d, .3), transparent),
+					radial-gradient(circle closest-corner at 80% 80%, transparentize(#77348d, .3), transparent);
+	}
+	ul {
+		li{
+			&:before {
+				background-color: #77348d;
+			}
+		}
+	}
+}
+.tabs__button {
+	
+	text-align: center;
+	transform: translateY(50%);
+}
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.tabs__buttons {
+	    top: -25px;
+	    margin: 0;
+	}
+	.tabs__button-item {
+		padding: 20px;
+		font-size: 20px;
+	}
+	.tabs__button-item.active {
+		padding-bottom: 40px;
+	}
+	.tabs__box {
+		margin: 0;
+	    padding: 140px 0 40px 30px;
+	}
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {	
+	.tabs__button-item {
+		font-size: 16px;
+	}
+	.tabs__box {
+	    padding: 120px 0 30px 30px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 640px) {
+	
+	.tabs__button-item {
+		
+		padding: 20px 15px;
+		font-size: 12px;
+	}
+	.tabs__section {
+		ul {
+			font-size: 16px;
+			line-height: 1.6;
+			li {
+				margin: 0 0 20px 0;
+				&:before {
+					top: 11px;
+				}
+			}
+		}
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.tabs__box {
+	    padding: 240px 0 20px 0;
+	}
+	.tabs__button-item {
+		display: block;
+		padding: 20px;
+		font-size: 20px;
+	}
+	.tabs__button-item.active {
+		padding-bottom: 20px;
+		padding-right: 60px;
+	}
+	.tabs__section {
+		ul {
+			font-size: 15px;
+			line-height: 1.5;
+			li {
+				margin: 0 0 15px 0;
+				&:before {
+					top: 9px;
+				}
+			}
+		}
+	}
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}

@@ -1,0 +1,90 @@
+.place {
+	padding: 300px 0 160px 0;
+	background-image: url(../img/bg-place.jpg);
+	background-size: cover;
+	background-position: center 0;
+}
+.place__wrapper {
+	@extend .container;
+}
+
+.place__title {
+	margin: 0 0 0 8%;
+	h2 {
+		line-height: 1.5;
+		span {
+			background-color: darken($main-color, 10%);
+			padding: 5px 20px;
+		}
+	}
+}
+.place__name {
+	max-width: 280px;
+	margin: 20px 0 0 8%;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #005faa;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	p {
+		margin: 0;
+	}
+}
+.place__adress {
+	max-width: 300px;
+	margin: 0 0 0 8%;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #005faa;
+	color: #fff;
+	font-weight: 600;
+	p {
+		margin: 0;
+	}
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 640px) {
+	.place {
+    	padding: 180px 0 80px;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.place {
+    	padding: 140px 0 60px;
+    }
+	.place__title {
+	    margin: 0;
+	}
+	.place__name {
+	    margin: 20px 0 0 0;
+	}
+	.place__adress {
+	    margin: 0;
+	}	
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}

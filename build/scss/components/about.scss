@@ -1,0 +1,151 @@
+.about {
+	@extend .section;
+	background-image: url(../img/bg-about.jpg);
+	background-size: cover;
+	background-position: right 0;
+}
+.about__wrapper {
+	@extend .container;
+}
+.about__title {
+	margin: 0 0 0 270px;
+}
+.about__box {
+	margin: 60px 0 0 270px;
+}
+#about .about__slider {
+	.owl-dots {
+		position: absolute;
+		left: -70px;
+		top: 0;
+		.owl-dot {
+			position: relative;
+			margin: 0 0 35px;
+			font-size: 15px;
+			transition: all .5s ease;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 8px;
+				left: -25px;
+				height: 4px;
+				width: 0;
+				background-color: $main-color;
+				border-radius: 5px;
+				transition: all .5s ease;
+			}
+			&:hover, &:active {
+				color: $main-color;
+			}
+		}
+		.owl-dot.active {
+			&:before {
+				width: 16px;
+			}
+		}
+	}
+	.owl-nav {
+		position: relative;
+		.owl-next,
+		.owl-prev {
+			display: inline-block;
+			vertical-align: top;
+			width: 27px;
+			height: 27px;
+			line-height: 27px;
+			margin: 0 10px;
+			text-align: center;
+			font-size: 27px;
+			color: $main-color;
+			transition: all .8s ease;
+			border-radius: 50%;
+			&:before {
+				font-family: "fontello";
+				font-style: normal;
+				font-weight: normal;
+				speak: none;
+				text-decoration: inherit;
+				text-align: center;
+				font-variant: normal;
+				text-transform: none;
+				-webkit-font-smoothing: antialiased;
+  				-moz-osx-font-smoothing: grayscale;
+			}
+			&:hover, &:active {
+				color: $accent-color;
+				transform: scale(1.2);
+			}
+		}
+		.owl-next {
+			&:before {
+				content: '\e803'
+			}
+		}
+		.owl-prev {
+			&:before {
+				content: '\e804'
+			}
+		}
+	}
+}
+.about__slider-item {
+	font-family: Verdana;
+	font-size: 16px;
+	line-height: 1.8;
+	p {
+		margin: 0 0 30px 0;
+	}
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.about__title {
+	    margin: 0 0 0 220px;
+	}
+	.about__box {
+	    margin: 60px 0 0 220px;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.about__title {
+	    margin: 0;
+	}
+	.about__box {
+	    margin: 60px 0 0 80px;
+	}
+	#about .about__slider .owl-dots {
+	    left: -50px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 640px) {
+	
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.about__box {
+	    margin: 60px 0 0 60px;
+	}
+	#about .about__slider .owl-dots {
+	    left: -35px;
+	}
+	.about__slider-item {
+	    font-size: 14px;
+	    line-height: 1.6;
+	}
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}
